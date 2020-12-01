@@ -11,12 +11,20 @@ class DailyPuzzle01:
             self.data = [int(line) for line in lines]
 
     def solve_part_one(self):
-        return sum([max((math.floor(value / 3) - 2, 0)) for value in self.data])
+        for idx1, num1 in enumerate(self.data):
+            for idx2, num2 in enumerate(self.data):
+                if idx1 == idx2:
+                    break
+                if num1 + num2 == 2020:
+                    return num1 * num2
+        return "No two numbers that add up to 2020 have been found"
 
     def solve_part_two(self):
-        data = [max((math.floor(value / 3) - 2, 0)) for value in self.data]
-        result = data
-        while any(value != 0 for value in data):
-            data = [max((math.floor(value / 3) - 2, 0)) for value in data]
-            result = result + data
-        return sum(result)
+        for idx1, num1 in enumerate(self.data):
+            for idx2, num2 in enumerate(self.data):
+                for idx3, num3 in enumerate(self.data):
+                    if idx1 == idx2 or idx1 == idx2 or idx1 == idx3:
+                        break
+                    if num1 + num2 + num3 == 2020:
+                        return num1 * num2 * num3
+        return "No three numbers that add up to 2020 have been found"
