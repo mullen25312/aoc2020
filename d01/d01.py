@@ -3,7 +3,7 @@ import math
 
 class DailyPuzzle01:
     def __init__(self):
-        self.data = None
+        self.data = []
 
     def read_data(self):
         with open("./d01/input.txt") as f:

@@ -5,8 +5,7 @@
 
 from d01.d01 import DailyPuzzle01
 from d02.d02 import DailyPuzzle02
-
-# from d03.d03 import DailyPuzzle03
+from d03.d03 import DailyPuzzle03
 
 
 def main():
@@ -25,6 +24,14 @@ def main():
     print("Solutions of daily puzzle 02:")
     print(d02.solve_part_one())
     print(d02.solve_part_two())
+    print()
+
+    # day2
+    d03 = DailyPuzzle03()
+    d03.read_data()
+    print("Solutions of daily puzzle 03:")
+    print(d03.solve_part_one())
+    print(d03.solve_part_two())
     print()
 
 
