@@ -1,4 +1,3 @@
-import math
 import re
 
 # regular expression for parsing input
@@ -13,8 +12,7 @@ class DailyPuzzle02:
 
     def read_data(self):
         with open("./d02/input.txt") as f:
-            lines = f.readlines()
-            for line in lines:
+            for line in f:
                 tmp = re.findall(reg_expr1, line)
                 letter = re.findall(reg_expr2, line)[0][0]
                 password = re.findall(reg_expr3, line)[0]

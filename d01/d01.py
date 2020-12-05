@@ -1,14 +1,10 @@
-import math
-
-
 class DailyPuzzle01:
     def __init__(self):
         self.data = []
 
     def read_data(self):
         with open("./d01/input.txt") as f:
-            lines = f.readlines()
-            self.data = [int(line) for line in lines]
+            self.data = [int(line) for line in f]
 
     def solve_part_one(self):
         for idx1, num1 in enumerate(self.data):

@@ -1,6 +1,3 @@
-import math
-
-
 class DailyPuzzle03:
     def __init__(self):
         self.data = []
