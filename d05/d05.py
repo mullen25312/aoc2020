@@ -5,6 +5,7 @@ class DailyPuzzle05:
     def read_data(self):
         with open("./d05/input.txt") as f:
             for line in f:
+
                 row = 0
                 for idx, letter in enumerate(reversed(line[0:7])):
                     if letter == "B":

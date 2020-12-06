@@ -8,6 +8,7 @@ from d02.d02 import DailyPuzzle02
 from d03.d03 import DailyPuzzle03
 from d04.d04 import DailyPuzzle04
 from d05.d05 import DailyPuzzle05
+from d06.d06 import DailyPuzzle06
 
 
 def main():
@@ -50,6 +51,14 @@ def main():
     print("Solutions of daily puzzle 05:")
     print(d05.solve_part_one())
     print(d05.solve_part_two())
+    print()
+
+    # day6
+    d06 = DailyPuzzle06()
+    d06.read_data()
+    print("Solutions of daily puzzle 06:")
+    print(d06.solve_part_one())
+    print(d06.solve_part_two())
     print()
 
 
