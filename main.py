@@ -9,6 +9,16 @@ from d03.d03 import DailyPuzzle03
 from d04.d04 import DailyPuzzle04
 from d05.d05 import DailyPuzzle05
 from d06.d06 import DailyPuzzle06
+from d07.d07 import DailyPuzzle07
+from d08.d08 import DailyPuzzle08
+from d09.d09 import DailyPuzzle09
+from d10.d10 import DailyPuzzle10
+from d11.d11 import DailyPuzzle11
+from d12.d12 import DailyPuzzle12
+from d13.d13 import DailyPuzzle13
+from d14.d14 import DailyPuzzle14
+from d15.d15 import DailyPuzzle15
+from d16.d16 import DailyPuzzle16
 
 
 def main():
@@ -59,6 +69,86 @@ def main():
     print("Solutions of daily puzzle 06:")
     print(d06.solve_part_one())
     print(d06.solve_part_two())
+    print()
+
+    # day7 (not olved yet)
+    d07 = DailyPuzzle07()
+    d07.read_data()
+    print("Solutions of daily puzzle 07:")
+    print(d07.solve_part_one())
+    print(d07.solve_part_two())
+    print()
+
+    # day8
+    # d08 = DailyPuzzle08()
+    # d08.read_data()
+    # print("Solutions of daily puzzle 08:")
+    # print(d08.solve_part_one())
+    # print(d08.solve_part_two())
+    # print()
+
+    # day9
+    d09 = DailyPuzzle09()
+    d09.read_data()
+    print("Solutions of daily puzzle 09:")
+    print(d09.solve_part_one())
+    print(d09.solve_part_two())
+    print()
+
+    # day10
+    d10 = DailyPuzzle10()
+    d10.read_data()
+    print("Solutions of daily puzzle 10:")
+    print(d10.solve_part_one())
+    print(d10.solve_part_two())
+    print()
+
+    # # day11
+    # d11 = DailyPuzzle11()
+    # d11.read_data()
+    # print("Solutions of daily puzzle 11:")
+    # print(d11.solve_part_one())
+    # print(d11.solve_part_two())
+    # print()
+
+    # day12
+    d12 = DailyPuzzle12()
+    d12.read_data()
+    print("Solutions of daily puzzle 12:")
+    print(d12.solve_part_one())
+    print(d12.solve_part_two())
+    print()
+
+    # day13
+    d13 = DailyPuzzle13()
+    d13.read_data()
+    print("Solutions of daily puzzle 13:")
+    print(d13.solve_part_one())
+    print(d13.solve_part_two())
+    print()
+
+    # day14
+    d14 = DailyPuzzle14()
+    d14.read_data()
+    print("Solutions of daily puzzle 14:")
+    print(d14.solve_part_one())
+    print(d14.solve_part_two())
+    print()
+
+    # day15
+    d15 = DailyPuzzle15()
+    d15.read_data()
+    print("Solutions of daily puzzle 15:")
+    print(d15.solve_part_one())
+    print(d15.solve_part_two())
+    print()
+
+    # day16
+    d16 = DailyPuzzle16()
+    d16.read_data()
+    print("Solutions of daily puzzle 16:")
+    print(d16.solve_part_one())
+    print(d16.solve_part_two())
     print()
 
 
