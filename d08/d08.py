@@ -1,5 +1,6 @@
 import copy
 
+
 class Handheld:
     def __init__(self, program):
         self.acc = 0
@@ -15,19 +16,19 @@ class Handheld:
             instruction = self.program[self.ip][0]
             argument = self.program[self.ip][1]
 
-            if instruction == 'acc':
+            if instruction == "acc":
                 self.acc += argument
                 self.ip += 1
-            elif instruction == 'jmp':
+            elif instruction == "jmp":
                 self.ip += argument
             else:
                 self.ip += 1
 
         return False
 
-
     def get_acc(self):
         return self.acc
+
 
 class DailyPuzzle08:
     def __init__(self):
@@ -36,8 +37,8 @@ class DailyPuzzle08:
     def read_data(self):
         with open("./d08/input.txt") as f:
             for line in f:
-                instruction = line.split(' ')[0]
-                argument = int(line.split(' ')[1])
+                instruction = line.split(" ")[0]
+                argument = int(line.split(" ")[1])
                 self.data.append([instruction, argument])
 
     def solve_part_one(self):
@@ -48,10 +49,10 @@ class DailyPuzzle08:
     def solve_part_two(self):
         for idx in range(len(self.data)):
             instructions = copy.deepcopy(self.data)
-            if instructions[idx][0] == 'nop':
-                instructions[idx][0] = 'jmp'
-            elif instructions[idx][0] == 'jmp':
-                instructions[idx][0] = 'nop'
+            if instructions[idx][0] == "nop":
+                instructions[idx][0] = "jmp"
+            elif instructions[idx][0] == "jmp":
+                instructions[idx][0] = "nop"
             else:
                 continue
 
@@ -59,4 +60,4 @@ class DailyPuzzle08:
             if mHandheld.run():
                 return mHandheld.get_acc()
 
-        return 'unsuccessful'
+        return "unsuccessful"

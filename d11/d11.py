@@ -1,5 +1,6 @@
 import copy
 
+
 class DailyPuzzle11:
     def __init__(self):
         self.data = []
@@ -9,22 +10,22 @@ class DailyPuzzle11:
             for idx, line in enumerate(f):
                 tmp = []
                 for pos in line[:-1]:
-                    if pos == '.':
+                    if pos == ".":
                         tmp.append(-1)
-                    elif pos == 'L':
-                        tmp.append(0) 
+                    elif pos == "L":
+                        tmp.append(0)
                     else:
                         tmp.append(1)
-                    
+
                 self.data.append(tmp)
 
     def solve_part_one(self):
-        adjacent = [[1,0], [1,1], [0, 1], [0,-1], [-1,0], [1,-1], [-1,1], [-1,-1]]
+        adjacent = [[1, 0], [1, 1], [0, 1], [0, -1], [-1, 0], [1, -1], [-1, 1], [-1, -1]]
 
-        tmp_old = copy.deepcopy(self.data) 
-        tmp_new = copy.deepcopy(self.data) 
+        tmp_old = copy.deepcopy(self.data)
+        tmp_new = copy.deepcopy(self.data)
 
-        for round in range(0,120):
+        for round in range(0, 120):
 
             for i, row in enumerate(tmp_old):
                 for j, col in enumerate(row):
@@ -32,9 +33,9 @@ class DailyPuzzle11:
                     # count occupied neighbors
                     occupied = 0
                     for adj in adjacent:
-                        if i+adj[0] < 0 or i+adj[0]>=len(tmp_old) or j+adj[1] < 0 or j+adj[1] >= len(row):
+                        if i + adj[0] < 0 or i + adj[0] >= len(tmp_old) or j + adj[1] < 0 or j + adj[1] >= len(row):
                             continue
-                        if tmp_old[i+adj[0]][j+adj[1]] == 1:
+                        if tmp_old[i + adj[0]][j + adj[1]] == 1:
                             occupied += 1
 
                     if tmp_old[i][j] == 0:
@@ -46,7 +47,7 @@ class DailyPuzzle11:
                             tmp_new[i][j] = 0
 
             tmp_old = copy.deepcopy(tmp_new)
-            
+
             # for row in tmp_new:
             #     output = ''
             #     for pos in row:
@@ -62,4 +63,4 @@ class DailyPuzzle11:
         return sum(row.count(1) for row in tmp_new)
 
     def solve_part_two(self):
-        return ''
+        return ""
