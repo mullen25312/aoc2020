@@ -119,13 +119,13 @@ def main():
     print(d12.solve_part_two())
     print()
 
-    # # day13
-    # d13 = DailyPuzzle13()
-    # d13.read_data()
-    # print("Solutions of daily puzzle 13:")
-    # print(d13.solve_part_one())
-    # print(d13.solve_part_two())
-    # print()
+    # day13
+    d13 = DailyPuzzle13()
+    d13.read_data()
+    print("Solutions of daily puzzle 13:")
+    print(d13.solve_part_one())
+    print(d13.solve_part_two())
+    print()
 
     # # day14
     # d14 = DailyPuzzle14()
