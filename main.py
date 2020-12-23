@@ -127,13 +127,13 @@ def main():
     print(d13.solve_part_two())
     print()
 
-    # # day14
-    # d14 = DailyPuzzle14()
-    # d14.read_data()
-    # print("Solutions of daily puzzle 14:")
-    # print(d14.solve_part_one())
-    # print(d14.solve_part_two())
-    # print()
+    # day14
+    d14 = DailyPuzzle14()
+    d14.read_data()
+    print("Solutions of daily puzzle 14:")
+    print(d14.solve_part_one())
+    print(d14.solve_part_two())
+    print()
 
     # # day15
     # d15 = DailyPuzzle15()
